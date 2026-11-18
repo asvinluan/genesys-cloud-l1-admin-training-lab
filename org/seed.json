@@ -1,0 +1,1553 @@
+{
+  "company": "Wattle Group (fictional)",
+  "timeZone": "Australia/Melbourne",
+  "note": "Pretend data for training. Every name, number and person is invented. Numbers are drama-range style: do not dial them.",
+  "lines": [
+    {
+      "id": "L1",
+      "name": "Health sales and service",
+      "number": "+61355500401",
+      "callRoute": "CR-Health",
+      "kind": "deep",
+      "outageNotice": false
+    },
+    {
+      "id": "L2",
+      "name": "General inquiries",
+      "number": "+61355500402",
+      "callRoute": "CR-General",
+      "kind": "deep",
+      "outageNotice": false
+    },
+    {
+      "id": "L3",
+      "name": "Overseas visitors",
+      "number": "+61355500403",
+      "callRoute": "CR-Overseas",
+      "kind": "deep",
+      "outageNotice": false
+    },
+    {
+      "id": "L4",
+      "name": "Insurance support",
+      "number": "+61355500404",
+      "callRoute": "CR-Insurance",
+      "kind": "light",
+      "outageNotice": false
+    },
+    {
+      "id": "L5",
+      "name": "Wealth and investments",
+      "number": "+61355500405",
+      "callRoute": "CR-Wealth",
+      "kind": "light",
+      "outageNotice": true
+    },
+    {
+      "id": "L6",
+      "name": "Funeral services",
+      "number": "+61355500406",
+      "callRoute": "CR-Funeral",
+      "kind": "light",
+      "outageNotice": true
+    },
+    {
+      "id": "L7",
+      "name": "Wholesale wealth",
+      "number": "+61355500407",
+      "callRoute": "CR-Wholesale",
+      "kind": "light",
+      "outageNotice": false
+    }
+  ],
+  "callRoutes": [
+    {
+      "id": "CR-Health",
+      "name": "Health sales and service",
+      "scheduleGroup": "SG-Phone",
+      "emergencyGroup": "EG-Phone",
+      "closesForEmergency": true,
+      "flows": {
+        "open": "IVR-Health-Open",
+        "closed": "IVR-Closed",
+        "holiday": "IVR-Holiday",
+        "emergency": "IVR-Emergency"
+      }
+    },
+    {
+      "id": "CR-General",
+      "name": "General inquiries",
+      "scheduleGroup": "SG-Phone",
+      "emergencyGroup": "EG-Phone",
+      "closesForEmergency": true,
+      "flows": {
+        "open": "IVR-General-Open",
+        "closed": "IVR-Closed",
+        "holiday": "IVR-Holiday",
+        "emergency": "IVR-Emergency"
+      }
+    },
+    {
+      "id": "CR-Overseas",
+      "name": "Overseas visitors",
+      "scheduleGroup": "SG-Phone",
+      "emergencyGroup": "EG-Phone",
+      "closesForEmergency": true,
+      "flows": {
+        "open": "IVR-Overseas-Open",
+        "closed": "IVR-Closed",
+        "holiday": "IVR-Holiday",
+        "emergency": "IVR-Emergency"
+      }
+    },
+    {
+      "id": "CR-Insurance",
+      "name": "Insurance support",
+      "scheduleGroup": "SG-Phone",
+      "emergencyGroup": "EG-Phone",
+      "closesForEmergency": true,
+      "flows": {
+        "open": "IVR-Insurance-Open",
+        "closed": "IVR-Closed",
+        "holiday": "IVR-Holiday",
+        "emergency": "IVR-Emergency"
+      }
+    },
+    {
+      "id": "CR-Wealth",
+      "name": "Wealth and investments",
+      "scheduleGroup": "SG-Phone",
+      "emergencyGroup": "EG-Phone",
+      "closesForEmergency": true,
+      "flows": {
+        "open": "IVR-Wealth-Open",
+        "closed": "IVR-Closed",
+        "holiday": "IVR-Holiday",
+        "emergency": "IVR-Emergency"
+      }
+    },
+    {
+      "id": "CR-Funeral",
+      "name": "Funeral services",
+      "scheduleGroup": "SG-Phone",
+      "emergencyGroup": "EG-Phone",
+      "closesForEmergency": true,
+      "flows": {
+        "open": "IVR-Funeral-Open",
+        "closed": "IVR-Closed",
+        "holiday": "IVR-Holiday",
+        "emergency": "IVR-Emergency"
+      }
+    },
+    {
+      "id": "CR-Wholesale",
+      "name": "Wholesale wealth",
+      "scheduleGroup": "SG-Phone",
+      "emergencyGroup": "EG-Phone",
+      "closesForEmergency": true,
+      "flows": {
+        "open": "IVR-Wholesale-Open",
+        "closed": "IVR-Closed",
+        "holiday": "IVR-Holiday",
+        "emergency": "IVR-Emergency"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "P-Greet-Health",
+      "purpose": "greeting",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-greet-health-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thanks for calling Wattle Health.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Greet-General",
+      "purpose": "greeting",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-greet-general-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thanks for calling Wattle Group.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Greet-Overseas",
+      "purpose": "greeting",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-greet-overseas-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thanks for calling Wattle Health, overseas visitor and student cover.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Greet-Insurance",
+      "purpose": "greeting",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-greet-insurance-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thanks for calling Wattle Insurance support.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Greet-Wealth",
+      "purpose": "greeting",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-greet-wealth-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thanks for calling Wattle Wealth.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Greet-Funeral",
+      "purpose": "greeting",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-greet-funeral-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thanks for calling Wattle Funeral Services.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Greet-Wholesale",
+      "purpose": "greeting",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-greet-wholesale-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thanks for calling Wattle Wholesale Wealth.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Menu-Health",
+      "purpose": "menu",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-menu-health-v1.wav",
+          "date": "2026-10-01",
+          "text": "If you are already a member and need help with your cover, press 1. To join or ask for a quote, press 2. For overseas visitor and student cover, press 3. For home, car or travel insurance, press 4.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Menu-General",
+      "purpose": "menu",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-menu-general-v1.wav",
+          "date": "2026-10-01",
+          "text": "For health cover, press 1. For any other insurance, press 2. For anything else, press 3.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Menu-Insurance",
+      "purpose": "menu",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-menu-insurance-v1.wav",
+          "date": "2026-10-01",
+          "text": "To make or check a claim, press 1. To change your policy, press 2.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Menu-Wealth",
+      "purpose": "menu",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-menu-wealth-v1.wav",
+          "date": "2026-10-01",
+          "text": "If you are already a client, press 1. If you are new and want to ask about investing, press 2.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Menu-Funeral",
+      "purpose": "menu",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-menu-funeral-v1.wav",
+          "date": "2026-10-01",
+          "text": "If you already have a plan with us, press 1. To ask about arranging a plan, press 2.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Closed",
+      "purpose": "closed",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-closed-v1.wav",
+          "date": "2026-10-01",
+          "text": "Our phone team is closed right now. We are open Monday to Friday, from 8:30 in the morning to 6 in the evening. Please call back then, or chat with us online, which is open until 8 in the evening on weekdays.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Holiday",
+      "purpose": "holiday",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-holiday-v1.wav",
+          "date": "2026-10-01",
+          "text": "Our phone team is closed today for a public holiday. We will be back on the next business day. You can send us an enquiry on our website, and we will reply within 3 to 5 business days.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Emergency",
+      "purpose": "emergency",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-emergency-v1.wav",
+          "date": "2026-10-01",
+          "text": "We are having a problem in our contact centre and cannot take calls right now. Please try again later, or chat with us online.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Outage-Notice",
+      "purpose": "notice",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-outage-notice-v1.wav",
+          "date": "2026-10-01",
+          "text": "We are sorry. Replies may be slower than usual today because of a worldwide technology outage. Thank you for your patience.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Hold-Offer",
+      "purpose": "in-queue",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-hold-offer-v1.wav",
+          "date": "2026-10-01",
+          "text": "All of our team are busy right now. Your estimated wait is about {minutes} minutes. To keep your place and have us call you back, press 1. Otherwise, please stay on the line.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Callback-Confirm",
+      "purpose": "in-queue",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-callback-confirm-v1.wav",
+          "date": "2026-10-01",
+          "text": "Thank you. We will call you back as soon as a team member is free. Goodbye.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Closed-NoChat",
+      "purpose": "closed",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-closed-nochat-v1.wav",
+          "date": "2026-10-01",
+          "text": "Our phone team is closed right now. We are open Monday to Friday, from 8:30 in the morning to 6 in the evening. Please call back then, or send us an enquiry on our website, and we will reply within 3 to 5 business days.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    },
+    {
+      "id": "P-Emergency-NoChat",
+      "purpose": "emergency",
+      "current": 1,
+      "versions": [
+        {
+          "v": 1,
+          "file": "p-emergency-nochat-v1.wav",
+          "date": "2026-10-01",
+          "text": "We are having a problem in our contact centre and cannot take calls right now. Please try again later, or send us an enquiry on our website.",
+          "ticket": "RITM0000001"
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "id": "IVR-Health-Open",
+      "name": "Health - open",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Greet-Health",
+          "version": 1
+        },
+        {
+          "prompt": "P-Menu-Health",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "notice",
+          "line": "L1"
+        },
+        {
+          "op": "play",
+          "prompt": "P-Greet-Health"
+        },
+        {
+          "op": "menu",
+          "prompt": "P-Menu-Health",
+          "timeoutSeconds": 5,
+          "retries": 1,
+          "options": {
+            "1": {
+              "label": "existing member",
+              "queue": "Q-HS-Members"
+            },
+            "2": {
+              "label": "join or quote",
+              "queue": "Q-HS-Sales"
+            },
+            "3": {
+              "label": "overseas visitors",
+              "queue": "Q-HS-Overseas"
+            },
+            "4": {
+              "label": "home, car or travel",
+              "queue": "Q-HS-GenIns"
+            }
+          },
+          "onNoInput": "Q-HS-Members"
+        }
+      ]
+    },
+    {
+      "id": "IVR-General-Open",
+      "name": "General - open",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Greet-General",
+          "version": 1
+        },
+        {
+          "prompt": "P-Menu-General",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "notice",
+          "line": "L2"
+        },
+        {
+          "op": "play",
+          "prompt": "P-Greet-General"
+        },
+        {
+          "op": "menu",
+          "prompt": "P-Menu-General",
+          "timeoutSeconds": 5,
+          "retries": 1,
+          "options": {
+            "1": {
+              "label": "health cover",
+              "queue": "Q-GEN-Health"
+            },
+            "2": {
+              "label": "other insurance",
+              "queue": "Q-GEN-Ins"
+            },
+            "3": {
+              "label": "anything else",
+              "queue": "Q-GEN-Other"
+            }
+          },
+          "onNoInput": "Q-GEN-Other"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Overseas-Open",
+      "name": "Overseas - open",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Greet-Overseas",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "notice",
+          "line": "L3"
+        },
+        {
+          "op": "play",
+          "prompt": "P-Greet-Overseas"
+        },
+        {
+          "op": "transfer",
+          "queue": "Q-HS-Overseas"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Insurance-Open",
+      "name": "Insurance - open",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Greet-Insurance",
+          "version": 1
+        },
+        {
+          "prompt": "P-Menu-Insurance",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "notice",
+          "line": "L4"
+        },
+        {
+          "op": "play",
+          "prompt": "P-Greet-Insurance"
+        },
+        {
+          "op": "menu",
+          "prompt": "P-Menu-Insurance",
+          "timeoutSeconds": 5,
+          "retries": 1,
+          "options": {
+            "1": {
+              "label": "claims",
+              "queue": "Q-INS-Claims"
+            },
+            "2": {
+              "label": "policy changes",
+              "queue": "Q-INS-Changes"
+            }
+          },
+          "onNoInput": "Q-INS-Claims"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Wealth-Open",
+      "name": "Wealth - open",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Greet-Wealth",
+          "version": 1
+        },
+        {
+          "prompt": "P-Menu-Wealth",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "notice",
+          "line": "L5"
+        },
+        {
+          "op": "play",
+          "prompt": "P-Greet-Wealth"
+        },
+        {
+          "op": "menu",
+          "prompt": "P-Menu-Wealth",
+          "timeoutSeconds": 5,
+          "retries": 1,
+          "options": {
+            "1": {
+              "label": "existing client",
+              "queue": "Q-WLT-Existing"
+            },
+            "2": {
+              "label": "new enquiry",
+              "queue": "Q-WLT-New"
+            }
+          },
+          "onNoInput": "Q-WLT-Existing"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Funeral-Open",
+      "name": "Funeral - open",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Greet-Funeral",
+          "version": 1
+        },
+        {
+          "prompt": "P-Menu-Funeral",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "notice",
+          "line": "L6"
+        },
+        {
+          "op": "play",
+          "prompt": "P-Greet-Funeral"
+        },
+        {
+          "op": "menu",
+          "prompt": "P-Menu-Funeral",
+          "timeoutSeconds": 5,
+          "retries": 1,
+          "options": {
+            "1": {
+              "label": "existing plan",
+              "queue": "Q-FUN-Existing"
+            },
+            "2": {
+              "label": "arrange a plan",
+              "queue": "Q-FUN-New"
+            }
+          },
+          "onNoInput": "Q-FUN-Existing"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Wholesale-Open",
+      "name": "Wholesale - open",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Greet-Wholesale",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "notice",
+          "line": "L7"
+        },
+        {
+          "op": "play",
+          "prompt": "P-Greet-Wholesale"
+        },
+        {
+          "op": "transfer",
+          "queue": "Q-WHO-Desk"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Closed",
+      "name": "Closed (shared)",
+      "type": "inboundCall",
+      "draftVersion": 2,
+      "publishedVersion": 2,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Closed",
+          "version": 1
+        },
+        {
+          "prompt": "P-Closed-NoChat",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "playIfOpen",
+          "group": "SG-Chat",
+          "openPrompt": "P-Closed",
+          "closedPrompt": "P-Closed-NoChat"
+        },
+        {
+          "op": "disconnect"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Holiday",
+      "name": "Holiday (shared)",
+      "type": "inboundCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Holiday",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "play",
+          "prompt": "P-Holiday"
+        },
+        {
+          "op": "disconnect"
+        }
+      ]
+    },
+    {
+      "id": "IVR-Emergency",
+      "name": "Emergency (shared)",
+      "type": "inboundCall",
+      "draftVersion": 2,
+      "publishedVersion": 2,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Emergency",
+          "version": 1
+        },
+        {
+          "prompt": "P-Emergency-NoChat",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "playIfOpen",
+          "group": "SG-Chat",
+          "openPrompt": "P-Emergency",
+          "closedPrompt": "P-Emergency-NoChat"
+        },
+        {
+          "op": "disconnect"
+        }
+      ]
+    },
+    {
+      "id": "IQ-Standard",
+      "name": "In-queue standard",
+      "type": "inQueueCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [
+        {
+          "prompt": "P-Hold-Offer",
+          "version": 1
+        },
+        {
+          "prompt": "P-Callback-Confirm",
+          "version": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "holdMusic"
+        },
+        {
+          "op": "callbackOffer",
+          "prompt": "P-Hold-Offer",
+          "confirmPrompt": "P-Callback-Confirm",
+          "ewtMinutesAtLeast": 5
+        }
+      ]
+    },
+    {
+      "id": "IQ-NoCallback",
+      "name": "In-queue, no callback",
+      "type": "inQueueCall",
+      "draftVersion": 1,
+      "publishedVersion": 1,
+      "publishedPrompts": [],
+      "steps": [
+        {
+          "op": "holdMusic"
+        }
+      ]
+    }
+  ],
+  "schedules": [
+    {
+      "id": "SCH-Phone-Open",
+      "name": "Phone open hours",
+      "type": "weekly",
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "start": "08:30",
+      "end": "18:00"
+    },
+    {
+      "id": "SCH-Chat-Open",
+      "name": "Chat open hours",
+      "type": "weekly",
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "start": "08:30",
+      "end": "20:00"
+    },
+    {
+      "id": "SCH-Holidays",
+      "name": "Public holidays",
+      "type": "dates",
+      "dates": [
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Boxing Day"
+        },
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2027-01-26",
+          "name": "Australia Day"
+        }
+      ]
+    }
+  ],
+  "scheduleGroups": [
+    {
+      "id": "SG-Phone",
+      "name": "Phone hours group",
+      "timeZone": "Australia/Melbourne",
+      "open": [
+        "SCH-Phone-Open"
+      ],
+      "holiday": [
+        "SCH-Holidays"
+      ]
+    },
+    {
+      "id": "SG-Chat",
+      "name": "Chat hours group",
+      "timeZone": "Australia/Melbourne",
+      "open": [
+        "SCH-Chat-Open"
+      ],
+      "holiday": [
+        "SCH-Holidays"
+      ]
+    }
+  ],
+  "emergencyGroups": [
+    {
+      "id": "EG-Phone",
+      "name": "Phone emergency",
+      "active": false
+    }
+  ],
+  "skills": [
+    "Health",
+    "Sales",
+    "Overseas",
+    "GeneralInsurance",
+    "Claims",
+    "Wealth",
+    "Funeral",
+    "Wholesale"
+  ],
+  "queues": [
+    {
+      "id": "Q-HS-Members",
+      "name": "Health - Members",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Health"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U01",
+        "U02",
+        "U04",
+        "U11"
+      ]
+    },
+    {
+      "id": "Q-HS-Sales",
+      "name": "Health - Sales",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Health",
+        "Sales"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U01",
+        "U03"
+      ]
+    },
+    {
+      "id": "Q-HS-Overseas",
+      "name": "Health - Overseas",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Health",
+        "Overseas"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U04",
+        "U05"
+      ]
+    },
+    {
+      "id": "Q-HS-GenIns",
+      "name": "Health - Home Car Travel",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "GeneralInsurance"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U06"
+      ]
+    },
+    {
+      "id": "Q-GEN-Health",
+      "name": "General - Health",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Health"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U08",
+        "U13"
+      ]
+    },
+    {
+      "id": "Q-GEN-Ins",
+      "name": "General - Insurance",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "GeneralInsurance"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U08",
+        "U06"
+      ]
+    },
+    {
+      "id": "Q-GEN-Other",
+      "name": "General - Other",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [],
+      "inQueueFlow": "IQ-NoCallback",
+      "callbacksEnabled": false,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U08"
+      ]
+    },
+    {
+      "id": "Q-INS-Claims",
+      "name": "Insurance - Claims",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Claims"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U06",
+        "U07"
+      ]
+    },
+    {
+      "id": "Q-INS-Changes",
+      "name": "Insurance - Changes",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "GeneralInsurance"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U06"
+      ]
+    },
+    {
+      "id": "Q-WLT-Existing",
+      "name": "Wealth - Existing",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Wealth"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U09"
+      ]
+    },
+    {
+      "id": "Q-WLT-New",
+      "name": "Wealth - New",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Wealth"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U09"
+      ]
+    },
+    {
+      "id": "Q-FUN-Existing",
+      "name": "Funeral - Existing",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Funeral"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U10"
+      ]
+    },
+    {
+      "id": "Q-FUN-New",
+      "name": "Funeral - New",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Funeral"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U10"
+      ]
+    },
+    {
+      "id": "Q-WHO-Desk",
+      "name": "Wholesale - Desk",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Wholesale"
+      ],
+      "inQueueFlow": "IQ-Standard",
+      "callbacksEnabled": true,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U10"
+      ]
+    },
+    {
+      "id": "Q-CHAT-Health",
+      "name": "Chat - Health",
+      "routingMethod": "Standard",
+      "evaluationMethod": "BestAvailableSkills",
+      "skills": [
+        "Health"
+      ],
+      "inQueueFlow": "IQ-NoCallback",
+      "callbacksEnabled": false,
+      "serviceLevelTarget": "80/20",
+      "members": [
+        "U02",
+        "U13"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "R-Agent",
+      "name": "Agent",
+      "permissions": [
+        "conversation:call:accept",
+        "conversation:callback:accept",
+        "routing:queue:view-own"
+      ]
+    },
+    {
+      "id": "R-TeamLead",
+      "name": "Team Leader",
+      "permissions": [
+        "conversation:call:accept",
+        "routing:queue:view",
+        "analytics:queueObservation:view",
+        "analytics:agent:view"
+      ]
+    },
+    {
+      "id": "R-Reporting",
+      "name": "Reporting Analyst",
+      "permissions": [
+        "analytics:queueAggregate:view",
+        "analytics:conversationDetail:view"
+      ]
+    },
+    {
+      "id": "R-TelAdmin",
+      "name": "Telephony Administrator",
+      "permissions": [
+        "routing:queue:edit",
+        "routing:callRoute:edit",
+        "routing:emergencyGroup:edit",
+        "routing:scheduleGroup:edit",
+        "architect:flow:publish",
+        "architect:userPrompt:edit",
+        "directory:user:edit"
+      ]
+    },
+    {
+      "id": "R-Auditor",
+      "name": "Auditor (view only)",
+      "permissions": [
+        "audit:audit:view",
+        "routing:queue:view",
+        "architect:flow:view"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "G-Health",
+      "name": "Health team"
+    },
+    {
+      "id": "G-General",
+      "name": "General team"
+    },
+    {
+      "id": "G-Insurance",
+      "name": "Insurance team"
+    },
+    {
+      "id": "G-Wealth",
+      "name": "Wealth and funeral team"
+    },
+    {
+      "id": "G-Leads",
+      "name": "Team leaders"
+    },
+    {
+      "id": "G-Systems",
+      "name": "Telephony systems"
+    }
+  ],
+  "users": [
+    {
+      "id": "U01",
+      "name": "Alex Reed",
+      "email": "alex.reed@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Health"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 4
+        },
+        {
+          "skill": "Sales",
+          "proficiency": 3
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U02",
+      "name": "Bree Nguyen",
+      "email": "bree.nguyen@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Health"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 5
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U03",
+      "name": "Carlos Diaz",
+      "email": "carlos.diaz@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Health"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 3
+        },
+        {
+          "skill": "Sales",
+          "proficiency": 5
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U04",
+      "name": "Dana Singh",
+      "email": "dana.singh@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Health"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 4
+        },
+        {
+          "skill": "Overseas",
+          "proficiency": 4
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U05",
+      "name": "Eli Moore",
+      "email": "eli.moore@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Health"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 2
+        },
+        {
+          "skill": "Overseas",
+          "proficiency": 5
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U06",
+      "name": "Fay Tran",
+      "email": "fay.tran@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Insurance"
+      ],
+      "skills": [
+        {
+          "skill": "GeneralInsurance",
+          "proficiency": 4
+        },
+        {
+          "skill": "Claims",
+          "proficiency": 3
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U07",
+      "name": "Gus Park",
+      "email": "gus.park@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Insurance"
+      ],
+      "skills": [
+        {
+          "skill": "Claims",
+          "proficiency": 5
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U08",
+      "name": "Hana Ito",
+      "email": "hana.ito@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-General"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 3
+        },
+        {
+          "skill": "GeneralInsurance",
+          "proficiency": 3
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U09",
+      "name": "Ivan Cole",
+      "email": "ivan.cole@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Wealth"
+      ],
+      "skills": [
+        {
+          "skill": "Wealth",
+          "proficiency": 4
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U10",
+      "name": "June Park",
+      "email": "june.park@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Wealth"
+      ],
+      "skills": [
+        {
+          "skill": "Funeral",
+          "proficiency": 4
+        },
+        {
+          "skill": "Wholesale",
+          "proficiency": 3
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U11",
+      "name": "Kim Lowe",
+      "email": "kim.lowe@example.invalid",
+      "role": "R-TeamLead",
+      "groups": [
+        "G-Leads",
+        "G-Health"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 5
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U12",
+      "name": "Lee Ahmed",
+      "email": "lee.ahmed@example.invalid",
+      "role": "R-Reporting",
+      "groups": [
+        "G-Systems"
+      ],
+      "skills": [],
+      "active": true
+    },
+    {
+      "id": "U13",
+      "name": "Mia Brown",
+      "email": "mia.brown@example.invalid",
+      "role": "R-Agent",
+      "groups": [
+        "G-Health"
+      ],
+      "skills": [
+        {
+          "skill": "Health",
+          "proficiency": 3
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "U14",
+      "name": "You (Telephony Administrator)",
+      "email": "you.(telephony.administrator)@example.invalid",
+      "role": "R-TelAdmin",
+      "groups": [
+        "G-Systems"
+      ],
+      "skills": [],
+      "active": true
+    }
+  ],
+  "chat": {
+    "deployment": "MSG-Web-Health",
+    "messengerConfig": "Wattle chat v1",
+    "scheduleGroup": "SG-Chat",
+    "inboundMessageFlow": "MSG-Health",
+    "queue": "Q-CHAT-Health",
+    "greeting": "Hi, you are chatting with Wattle Group. How can we help?",
+    "closedMessage": "Our chat team is offline right now. Chat is open from 8:30am to 8pm, Monday to Friday. You can send us an enquiry using the online form and we will reply within 3 to 5 business days."
+  },
+  "enquiryForm": {
+    "name": "Online enquiry form",
+    "replyBusinessDaysMin": 3,
+    "replyBusinessDaysMax": 5,
+    "handledBy": "Email or CRM case (not Genesys in this lab: a handover point)"
+  },
+  "dataTables": {
+    "notices": [
+      {
+        "key": "L1",
+        "active": false,
+        "message": "P-Outage-Notice"
+      },
+      {
+        "key": "L2",
+        "active": false,
+        "message": "P-Outage-Notice"
+      },
+      {
+        "key": "L3",
+        "active": false,
+        "message": "P-Outage-Notice"
+      },
+      {
+        "key": "L4",
+        "active": false,
+        "message": "P-Outage-Notice"
+      },
+      {
+        "key": "L5",
+        "active": true,
+        "message": "P-Outage-Notice"
+      },
+      {
+        "key": "L6",
+        "active": true,
+        "message": "P-Outage-Notice"
+      },
+      {
+        "key": "L7",
+        "active": false,
+        "message": "P-Outage-Notice"
+      }
+    ]
+  },
+  "callbacks": [],
+  "audit": []
+}

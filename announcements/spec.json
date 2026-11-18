@@ -1,0 +1,14 @@
+{
+  "_note": "Genesys facts (Genesys Cloud Resource Center, 'Prompts overview' and 'Upload an audio file', read 12 Nov 2026): WAV only, MP3 not supported; 8000 or 11025 Hz; 25 MB maximum; Architect converts uploads to 8-bit mu-law. Length, mono and loudness are THIS LAB'S house rules, not Genesys limits. Always re-check the Resource Center before you rely on a number.",
+  "namePattern": "^(health|general|overseas|insurance|wealth|funeral|wholesale|all)-(greeting|menu|closed|holiday|emergency|notice|hold)-\\d{8}-v\\d+\\.wav$",
+  "purposes": "greeting, menu, closed, holiday, emergency, notice, hold",
+  "maxMegabytes": 25,
+  "sampleRates": [
+    8000,
+    11025
+  ],
+  "maxSeconds": 60,
+  "maxChannels": 1,
+  "maxPeakDb": -1.0,
+  "minMeanDb": -32.0
+}
