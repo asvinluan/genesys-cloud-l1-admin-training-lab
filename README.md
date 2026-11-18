@@ -1,5 +1,7 @@
 # genesys-cloud-l1-admin-training-lab
 
+A hands-on training lab for Level 1 Genesys Cloud CX telephony administration, built around a fictional company (Wattle Group) with seven phone lines, web chat and an enquiry form. Seven lessons cover how a call travels, announcements and outage notices, hours, holidays and emergencies, queues, skills and people, callbacks, and online options. Every change needs an INC, RITM or CHG ticket and writes an audit entry, the way a real service desk works. It needs no Genesys account, no OAuth and no internet. The commands are teaching simulations, not real Genesys cmdlets, and the lab has not been run against a live org.
+
 A no-login, PowerShell-only training lab for **Genesys Cloud CX telephony administration**, written in plain English for a Level 1 engineer, with an architect lens on every lesson.
 
 The pretend company is **Wattle Group**: seven phone lines (health sales and service, general enquiries, overseas visitors, insurance, wealth, funeral, wholesale), web chat and an online enquiry form.
